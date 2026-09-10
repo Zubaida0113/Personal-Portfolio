@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zubaida Sehnaz | B.Tech CSE Graduate & Software Developer</title>
+  <title>Zubaida Sehnaz | B.Tech CSE & Software Developer</title>
   <meta name="description" content="Portfolio of Zubaida Sehnaz - Computer Science and Engineering Graduate, Full Stack Developer & Problem Solver." />
 
   <!-- Google Fonts -->
@@ -17,16 +17,16 @@
   <style>
     /* ================= ROOT VARIABLES & RESET ================= */
     :root {
-      --bg-dark: #0a0d14;
-      --bg-card: rgba(18, 24, 38, 0.7);
-      --bg-card-hover: rgba(26, 34, 53, 0.85);
+      --bg-dark: #160b10;
+      --bg-card: rgba(39, 16, 24, 0.76);
+      --bg-card-hover: rgba(62, 22, 35, 0.88);
       --border-color: rgba(255, 255, 255, 0.08);
-      --border-glow: rgba(99, 102, 241, 0.4);
-      --primary: #6366f1;
-      --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-      --accent-cyan: #06b6d4;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
+      --border-glow: rgba(229, 43, 80, 0.55);
+      --primary: #e52b50;
+      --primary-gradient: linear-gradient(135deg, #9f2b68 0%, #e52b50 52%, #f19cbb 100%);
+      --accent-cyan: #ff9db8;
+      --text-main: #fff5f7;
+      --text-muted: #c9a5ae;
       --font-sans: 'Plus Jakarta Sans', sans-serif;
       --font-mono: 'Fira Code', monospace;
       --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -48,6 +48,47 @@
       position: relative;
     }
 
+    @keyframes hero-enter {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    body.motion-ready .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    body.motion-ready .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    body.motion-ready .hero-text,
+    body.motion-ready .code-card {
+      animation: hero-enter 0.75s ease both;
+    }
+
+    body.motion-ready .code-card {
+      animation-delay: 0.12s;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
     /* Ambient Background Glows */
     .glow-bg {
       position: fixed;
@@ -59,9 +100,9 @@
       pointer-events: none;
       opacity: 0.25;
     }
-    .glow-1 { top: -100px; left: -100px; background: #6366f1; }
-    .glow-2 { top: 50%; right: -150px; background: #a855f7; }
-    .glow-3 { bottom: -100px; left: 30%; background: #06b6d4; }
+    .glow-1 { top: -100px; left: -100px; background: #9f2b68; }
+    .glow-2 { top: 50%; right: -150px; background: #e52b50; }
+    .glow-3 { bottom: -100px; left: 30%; background: #f19cbb; }
 
     a {
       text-decoration: none;
@@ -98,6 +139,7 @@
     .section-title h2 .gradient-text {
       background: var(--primary-gradient);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
@@ -124,12 +166,12 @@
     .btn-primary {
       background: var(--primary-gradient);
       color: #fff;
-      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35);
+      box-shadow: 0 4px 20px rgba(229, 43, 80, 0.35);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+      box-shadow: 0 8px 25px rgba(229, 43, 80, 0.5);
     }
 
     .btn-outline {
@@ -179,6 +221,7 @@
     .nav-logo span {
       background: var(--primary-gradient);
       -webkit-background-clip: text;
+        background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
@@ -230,12 +273,12 @@
       align-items: center;
       gap: 8px;
       padding: 6px 14px;
-      background: rgba(99, 102, 241, 0.12);
-      border: 1px solid rgba(99, 102, 241, 0.3);
+      background: rgba(229, 43, 80, 0.12);
+      border: 1px solid rgba(229, 43, 80, 0.3);
       border-radius: 30px;
       font-size: 0.85rem;
       font-weight: 600;
-      color: #a5b4fc;
+      color: #ffc2d0;
       margin-bottom: 20px;
     }
 
@@ -299,7 +342,7 @@
 
     .social-icon:hover {
       color: #fff;
-      background: rgba(99, 102, 241, 0.2);
+      background: rgba(229, 43, 80, 0.2);
       border-color: var(--primary);
       transform: translateY(-3px);
     }
@@ -337,9 +380,9 @@
       font-size: 0.9rem;
       line-height: 1.7;
     }
-    .code-key { color: #f472b6; }
-    .code-val { color: #38bdf8; }
-    .code-str { color: #a3e635; }
+    .code-key { color: #ff9db8; }
+    .code-val { color: #f19cbb; }
+    .code-str { color: #ffd7e0; }
     .code-comment { color: #64748b; }
 
     /* ================= ABOUT SECTION ================= */
@@ -381,7 +424,7 @@
 
     .highlight-box:hover {
       border-color: var(--border-glow);
-      background: rgba(99, 102, 241, 0.05);
+      background: rgba(229, 43, 80, 0.05);
       transform: translateY(-3px);
     }
 
@@ -431,8 +474,8 @@
       width: 46px;
       height: 46px;
       border-radius: 12px;
-      background: rgba(99, 102, 241, 0.1);
-      border: 1px solid rgba(99, 102, 241, 0.25);
+      background: rgba(229, 43, 80, 0.1);
+      border: 1px solid rgba(229, 43, 80, 0.25);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -462,7 +505,7 @@
     }
 
     .skill-badge:hover {
-      background: rgba(99, 102, 241, 0.15);
+      background: rgba(229, 43, 80, 0.15);
       color: #fff;
       border-color: var(--primary);
     }
@@ -564,10 +607,10 @@
       font-family: var(--font-mono);
       font-size: 0.78rem;
       padding: 3px 10px;
-      background: rgba(99, 102, 241, 0.1);
-      color: #c7d2fe;
+      background: rgba(229, 43, 80, 0.1);
+      color: #ffd7e0;
       border-radius: 6px;
-      border: 1px solid rgba(99, 102, 241, 0.2);
+      border: 1px solid rgba(229, 43, 80, 0.2);
     }
 
     .project-links {
@@ -706,8 +749,8 @@
       width: 48px;
       height: 48px;
       border-radius: 12px;
-      background: rgba(99, 102, 241, 0.1);
-      border: 1px solid rgba(99, 102, 241, 0.25);
+      background: rgba(229, 43, 80, 0.1);
+      border: 1px solid rgba(229, 43, 80, 0.25);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -769,7 +812,7 @@
       outline: none;
       border-color: var(--primary);
       background: rgba(255, 255, 255, 0.06);
-      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+      box-shadow: 0 0 0 3px rgba(229, 43, 80, 0.2);
     }
 
     textarea.form-control {
@@ -894,7 +937,7 @@
           <h1>Hi, I'm <br><span class="gradient-text">Zubaida Sehnaz</span></h1>
           <span class="dynamic-role" id="typingText"></span>
           <p>
-            B.Tech Computer Science & Engineering graduate passionate about building robust web applications, scalable backends, and algorithmic solutions to solve real-world problems.
+            Computer Science and Engineering student at Galgotias University with experience building enterprise solutions, AI-powered applications, and data-driven recommendation systems.
           </p>
 
           <div class="hero-actions">
@@ -910,13 +953,13 @@
             <a href="https://www.linkedin.com/in/zubaida-sehnaz-a5415b260/" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+            <a href="https://github.com/Zubaida0113" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
               <i class="fa-brands fa-github"></i>
             </a>
-            <a href="mailto:your-email@example.com" class="social-icon" title="Email">
+            <a href="mailto:zubaida.sehnaz.cse@gmail.com" class="social-icon" title="Email">
               <i class="fa-solid fa-envelope"></i>
             </a>
-            <a href="#" class="social-icon" title="LeetCode / CodeProfile">
+            <a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer" class="social-icon" title="LeetCode - 155+ solved">
               <i class="fa-solid fa-code"></i>
             </a>
           </div>
@@ -933,11 +976,11 @@
             <span class="code-comment">// Software Engineer Profile</span><br>
             <span class="code-key">const</span> <span class="code-val">candidate</span> = {<br>
             &nbsp;&nbsp;<span class="code-key">name</span>: <span class="code-str">"Zubaida Sehnaz"</span>,<br>
-            &nbsp;&nbsp;<span class="code-key">degree</span>: <span class="code-str">"B.Tech in Computer Science & Engg."</span>,<br>
+            &nbsp;&nbsp;<span class="code-key">degree</span>: <span class="code-str">"B.Tech CSE, CGPA 9.12"</span>,<br>
             &nbsp;&nbsp;<span class="code-key">focusAreas</span>: [<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Full-Stack Web Development"</span>,<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Data Structures & Algorithms"</span>,<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Database & Cloud Solutions"</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Enterprise Power Platform Solutions"</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"AI-Powered Applications"</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Data Processing & Recommendation Systems"</span><br>
             &nbsp;&nbsp;],<br>
             &nbsp;&nbsp;<span class="code-key">hardWorker</span>: <span class="code-val">true</span>,<br>
             &nbsp;&nbsp;<span class="code-key">openForOpportunities</span>: <span class="code-val">true</span><br>
@@ -960,13 +1003,13 @@
       <div class="about-grid">
         <div class="about-card">
           <p>
-            I am a recent <strong>Computer Science & Engineering graduate</strong> with a strong foundation in core software engineering principles, algorithms, and modern full-stack development.
+            I am a <strong>Computer Science & Engineering student</strong> at Galgotias University, graduating in 2026 with a CGPA of 9.12. I enjoy building practical software that connects thoughtful interfaces with reliable backends and useful data.
           </p>
           <p>
-            Throughout my academic career, I developed a passion for writing clean, maintainable code and solving complex technical challenges. I thrive on translating business logic and requirements into intuitive, performant digital solutions.
+            As an Associate Software Engineer at MAQ Software, I have developed and tested enterprise solutions for MaSH, AIOps, and CELA using Power Apps, Power Automate, Dataverse, Canvas Apps, Azure, Power BI, SharePoint, and SQL Server.
           </p>
           <p>
-            Always eager to learn modern frameworks, contribute to impactful engineering teams, and stay current with emerging technologies.
+            I also contribute to open source and applied AI projects, with a focus on accessible tools, clear problem solving, and continuous learning.
           </p>
           <a href="#contact" class="btn btn-outline" style="margin-top: 10px;">
             <i class="fa-solid fa-paper-plane"></i> Get In Touch
@@ -979,16 +1022,16 @@
             <span>CSE Graduate</span>
           </div>
           <div class="highlight-box">
-            <h3>10+</h3>
-            <span>Projects Built</span>
+            <h3>9.23</h3>
+            <span>University CGPA</span>
           </div>
           <div class="highlight-box">
-            <h3>250+</h3>
-            <span>DSA Problems Solved</span>
+            <h3>155+</h3>
+            <span>LeetCode Problems</span>
           </div>
           <div class="highlight-box">
-            <h3>100%</h3>
-            <span>Commitment to Quality</span>
+            <h3>Top 6%</h3>
+            <span>GirlScript Contributor</span>
           </div>
         </div>
       </div>
@@ -1013,9 +1056,9 @@
           <div class="skill-badges">
             <span class="skill-badge">Java</span>
             <span class="skill-badge">Python</span>
-            <span class="skill-badge">C / C++</span>
             <span class="skill-badge">JavaScript (ES6+)</span>
-            <span class="skill-badge">SQL</span>
+            <span class="skill-badge">HTML5</span>
+            <span class="skill-badge">CSS3</span>
           </div>
         </div>
 
@@ -1027,11 +1070,8 @@
           </div>
           <div class="skill-badges">
             <span class="skill-badge">React.js</span>
-            <span class="skill-badge">HTML5</span>
-            <span class="skill-badge">CSS3 / SASS</span>
-            <span class="skill-badge">Tailwind CSS</span>
             <span class="skill-badge">Bootstrap</span>
-            <span class="skill-badge">Responsive Design</span>
+            <span class="skill-badge">REST APIs</span>
           </div>
         </div>
 
@@ -1042,11 +1082,11 @@
             <h3>Backend & Data</h3>
           </div>
           <div class="skill-badges">
-            <span class="skill-badge">Node.js</span>
-            <span class="skill-badge">Express.js</span>
-            <span class="skill-badge">RESTful APIs</span>
+            <span class="skill-badge">Spring Boot</span>
+            <span class="skill-badge">Spring Security</span>
+            <span class="skill-badge">Flask</span>
             <span class="skill-badge">MySQL</span>
-            <span class="skill-badge">MongoDB</span>
+            <span class="skill-badge">H2 Database</span>
           </div>
         </div>
 
@@ -1054,15 +1094,38 @@
         <div class="skill-card">
           <div class="skill-card-header">
             <div class="skill-icon-wrap"><i class="fa-solid fa-toolbox"></i></div>
-            <h3>Core CS & Tools</h3>
+            <h3>AI / ML & Tools</h3>
           </div>
           <div class="skill-badges">
-            <span class="skill-badge">DSA</span>
-            <span class="skill-badge">OOPs Concept</span>
-            <span class="skill-badge">DBMS</span>
+            <span class="skill-badge">Rule-based NLP</span>
+            <span class="skill-badge">Whisper Speech-to-Text</span>
+            <span class="skill-badge">Fuzzy Matching</span>
+            <span class="skill-badge">Pandas</span>
+            <span class="skill-badge">Power Apps</span>
+            <span class="skill-badge">Power Automate</span>
+            <span class="skill-badge">Dataverse</span>
+            <span class="skill-badge">Azure</span>
+            <span class="skill-badge">Power BI</span>
+            <span class="skill-badge">SharePoint</span>
             <span class="skill-badge">Git & GitHub</span>
-            <span class="skill-badge">VS Code</span>
             <span class="skill-badge">Postman</span>
+          </div>
+        </div>
+
+        <!-- Strengths -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap"><i class="fa-solid fa-people-group"></i></div>
+            <h3>Strengths</h3>
+          </div>
+          <div class="skill-badges">
+            <span class="skill-badge">Adaptability</span>
+            <span class="skill-badge">Communication</span>
+            <span class="skill-badge">Collaboration</span>
+            <span class="skill-badge">Critical Thinking</span>
+            <span class="skill-badge">English</span>
+            <span class="skill-badge">Hindi</span>
+            <span class="skill-badge">Bengali</span>
           </div>
         </div>
       </div>
@@ -1080,94 +1143,55 @@
       <!-- Category Filter -->
       <div class="project-filters">
         <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="web">Web Development</button>
         <button class="filter-btn" data-filter="ai">AI / Data</button>
-        <button class="filter-btn" data-filter="core">Core / Systems</button>
+        <button class="filter-btn" data-filter="web">Web / Backend</button>
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card" data-category="web">
+        <!-- CivicVoice AI -->
+        <div class="project-card" data-category="ai">
           <div class="project-header-bar"></div>
           <div class="project-body">
-            <span class="project-category">Full Stack Web</span>
-            <h3>Collaborative Project Manager</h3>
+            <span class="project-category">AI-Powered Web Application</span>
+            <h3>CivicVoice AI</h3>
             <p>
-              A responsive task and sprint management tool with user authentication, team workspace collaboration, Kanban boards, and real-time state synchronization.
+              An AI-powered municipal complaint management system that accepts voice complaints, converts speech to structured text, and automatically categorizes and prioritizes issues.
             </p>
             <div class="project-tech">
-              <span class="tech-pill">React.js</span>
-              <span class="tech-pill">Node.js</span>
-              <span class="tech-pill">Express</span>
-              <span class="tech-pill">MongoDB</span>
+              <span class="tech-pill">HTML5</span>
+              <span class="tech-pill">CSS3</span>
+              <span class="tech-pill">Bootstrap</span>
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">Flask</span>
+              <span class="tech-pill">Whisper API</span>
+              <span class="tech-pill">Geopy</span>
+              <span class="tech-pill">RapidFuzz</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
-              <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              <a href="https://github.com/Zubaida0113" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Repo Link</a>
             </div>
           </div>
         </div>
 
-        <!-- Project 2 -->
+        <!-- Music Recommendation System -->
         <div class="project-card" data-category="ai">
           <div class="project-header-bar"></div>
           <div class="project-body">
             <span class="project-category">Machine Learning / Python</span>
-            <h3>AI Disease Prediction Portal</h3>
+            <h3>Music Recommendation System</h3>
             <p>
-              An intelligent health screening app utilizing supervised machine learning models to assess user symptoms and predict potential health risks with high accuracy.
+              A lyrics-based recommender using TF-IDF and cosine similarity to recommend tracks, with data preprocessing and visualized top-10 recommendations.
             </p>
             <div class="project-tech">
               <span class="tech-pill">Python</span>
-              <span class="tech-pill">Scikit-Learn</span>
-              <span class="tech-pill">Flask</span>
+              <span class="tech-pill">TensorFlow</span>
+              <span class="tech-pill">Keras</span>
+              <span class="tech-pill">Scikit-learn</span>
               <span class="tech-pill">Pandas</span>
+              <span class="tech-pill">Matplotlib</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
-              <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card" data-category="web">
-          <div class="project-header-bar"></div>
-          <div class="project-body">
-            <span class="project-category">Frontend / SaaS</span>
-            <h3>E-Learning & Quiz Engine</h3>
-            <p>
-              An interactive interactive learning dashboard featuring timed module quizzes, dynamic score calculation, performance charts, and downloadable certificates.
-            </p>
-            <div class="project-tech">
-              <span class="tech-pill">JavaScript (ES6+)</span>
-              <span class="tech-pill">Tailwind CSS</span>
-              <span class="tech-pill">HTML5 Canvas</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
-              <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card" data-category="core">
-          <div class="project-header-bar"></div>
-          <div class="project-body">
-            <span class="project-category">Core CS & Algorithms</span>
-            <h3>Interactive Algorithm Visualizer</h3>
-            <p>
-              A visual learning tool demonstrating the execution of sorting algorithms (QuickSort, MergeSort) and pathfinding graph algorithms (Dijkstra, BFS/DFS) in real time.
-            </p>
-            <div class="project-tech">
-              <span class="tech-pill">Data Structures</span>
-              <span class="tech-pill">Algorithms</span>
-              <span class="tech-pill">JavaScript</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
-              <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+              <a href="https://github.com/Zubaida0113" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Repo Link</a>
             </div>
           </div>
         </div>
@@ -1184,28 +1208,54 @@
       </div>
 
       <div class="timeline">
-        <!-- Education 1 -->
+        <!-- Education -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-date">2020 – 2024 (Graduated)</span>
-            <h3>Bachelor of Technology (B.Tech) - Computer Science & Engineering</h3>
-            <h4>Major: Computer Science and Engineering</h4>
+            <span class="timeline-date">2022 – 2026</span>
+            <h3>Bachelor of Technology (CSE)</h3>
+            <h4>Galgotias University, Greater Noida, U.P. | CGPA: 9.12</h4>
             <p>
-              <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Object-Oriented Programming (OOPs), Database Management Systems (DBMS), Operating Systems, Computer Networks, Software Engineering.
+              Computer Science and Engineering foundation with practical experience in software development, AI/ML, databases, APIs, and enterprise technology platforms. Earlier education: Modern School, Noida, with 95.4% in 12th (PCM, CBSE) and 96.4% in 10th (CBSE).
             </p>
           </div>
         </div>
 
-        <!-- Milestone 2 -->
+        <!-- Work Experience -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-date">Certifications & Training</span>
-            <h3>Full-Stack Web Development & Problem Solving</h3>
-            <h4>Self-Directed & Online Specializations</h4>
+            <span class="timeline-date">Nov 2025 – Jul 2026</span>
+            <h3>Associate Software Engineer</h3>
+            <h4>MAQ Software | Noida, India</h4>
             <p>
-              Completed comprehensive coursework on modern JavaScript, React, Backend API construction, and active competitive problem-solving across platforms like LeetCode and HackerRank.
+              Developed enterprise solutions for MaSH, AIOps, and CELA using Power Apps, Power Automate, Dataverse, and Canvas Apps. Built and tested solutions with Azure, Power BI, SharePoint, SQL Server, HTML, CSS, and JavaScript across development, testing, and deployment.
+            </p>
+          </div>
+        </div>
+
+        <!-- Open Source Experience -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Oct 2024 – Nov 2024</span>
+            <h3>Open-Source Contributor</h3>
+            <h4>GirlScript Code of Summer Extd. | Remote</h4>
+            <p>
+              Ranked in the Top 6% among 4,000 contributors with 1,095 points, delivered 8+ feature enhancements, developed HTML/CSS/JavaScript components, and contributed 9 pull requests.
+            </p>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Certifications & Achievements</span>
+            <h3>Continuous Learning & Community</h3>
+            <h4>2023 – 2024</h4>
+            <p>
+              Postman API (2024), Oracle Java & DB (2024), IBM Web Development (2023), GSSoC 2024 Top 251/4000, Hacktoberfest 2024 with 9 contributions, HackerRank 4-star Java, and GFG university rank 700.
             </p>
           </div>
         </div>
@@ -1225,7 +1275,7 @@
         <div class="contact-info">
           <h3>Let's collaborate</h3>
           <p>
-            I am actively exploring entry-level and junior software engineer opportunities, internships, and full-time tech roles. Feel free to reach out via LinkedIn or send a direct message.
+            I am open to software engineering opportunities, collaborations, and conversations about practical technology solutions. Feel free to connect through LinkedIn, email, or phone.
           </p>
 
           <div class="contact-items">
@@ -1243,7 +1293,7 @@
               <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
               <div>
                 <h4>Email</h4>
-                <a href="mailto:your-email@example.com">zubaida.sehnaz.cse@gmail.com</a>
+                <a href="mailto:zubaidasehnaz@gmail.com">zubaida.sehnaz.cse@gmail.com</a>
               </div>
             </div>
 
@@ -1251,7 +1301,15 @@
               <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
               <div>
                 <h4>Location</h4>
-                <span>India (Open to Relocation & Remote)</span>
+                <span>Noida, Uttar Pradesh, India</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:+919821581463">+91 98215 81463</a>
               </div>
             </div>
           </div>
@@ -1305,10 +1363,10 @@
   <script>
     // 1. Dynamic Typing Effect
     const roles = [
-      "B.Tech CSE Graduate",
-      "Full-Stack Web Developer",
-      "Software Engineer Enthusiast",
-      "Problem Solver"
+      "B.Tech CSE",
+      "Associate Software Engineer",
+      "AI / ML Developer",
+      "Open-Source Contributor"
     ];
     let roleIndex = 0;
     let charIndex = 0;
@@ -1420,7 +1478,29 @@
       }, 4000);
     });
 
-    // 6. Set Current Year in Footer
+    // 6. Reveal content as it enters the viewport
+    const revealElements = document.querySelectorAll(
+      ".section-title, .about-card, .highlight-box, .skill-card, .project-card, .timeline-item, .contact-info, .contact-form"
+    );
+    const staggeredGroups = document.querySelectorAll(".highlight-box, .skill-card, .project-card, .timeline-item");
+
+    document.body.classList.add("motion-ready");
+    revealElements.forEach((element) => element.classList.add("reveal"));
+    staggeredGroups.forEach((element, index) => {
+      element.style.transitionDelay = `${(index % 4) * 70}ms`;
+    });
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12 });
+
+    revealElements.forEach((element) => revealObserver.observe(element));
+
+    // 7. Set Current Year in Footer
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
 </body>
