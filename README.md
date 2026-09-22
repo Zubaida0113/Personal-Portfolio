@@ -1,33 +1,30 @@
-# Personal Portfolio
+# Zubaida Sehnaz | Portfolio
 
-A modern, responsive personal portfolio website for Zubaida Sehnaz, built with HTML, CSS, and JavaScript. The site showcases technical skills, projects, education, and contact information in a polished single-page layout.
+A modern, responsive personal portfolio website built to showcase my background in Computer Science and Engineering, technical skills, professional experience, projects, and contact information.
 
-## Live Demo
+This portfolio is designed with a dark aesthetic, soft gradient highlights, and a clean single-page layout for a polished, professional presentation.
 
-Open `index.html` in a browser, or run a local server to view it.
+## Preview
+
+Open `index.html` in your browser to view the project locally.
 
 ## Features
 
-- Single-page portfolio layout
-- Modern dark neon aesthetic with gradient accents
-- Responsive design for desktop, tablet, and mobile
-- Sections for:
-  - Hero / introduction
-  - About Me
-  - Skills
-  - Projects
-  - Education
-  - Contact
-- Animated UI and smooth scrolling
-- Social links and CV / PDF download section
-- Contact form UI with toast feedback
+- Elegant single-page portfolio design
+- Responsive layout for desktop, tablet, and mobile devices
+- Modern dark theme with pink/gradient accents
+- Sections for About, Skills, Projects, Education, and Contact
+- Smooth scrolling and interactive navigation
+- Social media and professional links
+- Contact form UI with feedback toast
+- Clean HTML, CSS, and JavaScript structure
 
 ## Tech Stack
 
 - HTML5
 - CSS3
 - JavaScript
-- Font Awesome icons
+- Font Awesome
 - Google Fonts
 
 ## Project Structure
@@ -38,22 +35,26 @@ Personal-Portfolio/
 ├── README.md
 ├── LICENSE
 ├── zubaida_1.pdf
-└── assets (if added later)
+└── assets/   (optional, if added later)
 ```
 
 ## Getting Started
 
-### Option 1: Open directly
-
-1. Download or clone the repository
-2. Open `index.html` in your browser
-
-### Option 2: Run a local server
-
-Using Python:
+### 1. Clone the repository
 
 ```bash
+git clone https://github.com/Zubaida0113/Personal-Portfolio.git
 cd Personal-Portfolio
+```
+
+### 2. Run locally
+
+You can either:
+
+- open `index.html` directly in a browser, or
+- run a local server:
+
+```bash
 python -m http.server 8000
 ```
 
@@ -63,15 +64,26 @@ Then open:
 http://localhost:8000
 ```
 
-## Customization
+## Personalization
 
-To personalize the portfolio:
+You can easily customize the portfolio by updating:
 
-- Update name, role, and bio in `index.html`
-- Change social links and contact details
-- Replace project cards and skill badges
-- Add your own resume or PDF file in the project root
-- Adjust colors, gradients, and styling in the embedded CSS section
+- your name, title, and intro text in `index.html`
+- social links and contact details
+- skills and project cards
+- education timeline
+- theme colors and styles in the embedded CSS
+- your resume/PDF file (`zubaida_1.pdf`)
+
+## Skills Highlighted
+
+- Web Development
+- Full-Stack Development
+- Problem Solving
+- Data Processing
+- AI-powered Applications
+- Recommendation Systems
+- Enterprise Solutions
 
 ## Contact
 
@@ -86,3 +98,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Author
 
 Zubaida Sehnaz
+
+Computer Science and Engineering Student | Software Developer | Problem Solver
