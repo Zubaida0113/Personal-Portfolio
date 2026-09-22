@@ -89,7 +89,7 @@ You can easily customize the portfolio by updating:
 
 - LinkedIn: https://www.linkedin.com/in/zubaida-sehnaz-a5415b260/
 - GitHub: https://github.com/Zubaida0113
-- Email: zubaida.sehnaz.cse@gmail.com
+- Email: zubaidasehnaz.@gmail.com
 
 ## License
 
@@ -99,4 +99,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Zubaida Sehnaz
 
-Computer Science and Engineering Student | Software Developer | Problem Solver
+9.23 CGPA CSE Graduate | Associate Software Developer | Problem Solver
