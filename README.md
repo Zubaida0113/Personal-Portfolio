@@ -4,11 +4,10 @@ A responsive personal portfolio for Zubaida Sehnaz, a Computer Science and Engin
 
 | | |
 | --- | --- |
-| Live website | [View portfolio](YOUR_LIVE_DEMO_URL) |
+| Live website | [View portfolio](https://zubaida0113.github.io/Personal-Portfolio/) |
 | GitHub repository | [View source code](https://github.com/Zubaida0113/Personal-Portfolio) |
-| LinkedIn | [Connect with Zubaida](https://www.linkedin.com/in/zubaida-sehnaz-a5415b260/) |
+| LinkedIn | [Connect with ME](https://www.linkedin.com/in/zubaida-sehnaz-a5415b260/) |
 
-Replace `YOUR_LIVE_DEMO_URL` with the deployed portfolio URL before publishing this README. A homepage screenshot can be added at `assets/portfolio-preview.png` when available.
 
 ## Overview
 
@@ -36,17 +35,16 @@ It is designed to help recruiters, collaborators, and developers quickly underst
 | --- | --- |
 | Frontend | HTML5, CSS3, JavaScript (ES6+) |
 | Design | Responsive design, CSS Grid, Flexbox, CSS animations |
-| Fonts | Plus Jakarta Sans, Fira Code |
 | Icons | Font Awesome |
-| Deployment | GitHub Pages, Netlify, or Vercel |
+| Deployment | GitHub Pages |
 | Version control | Git and GitHub |
 
 ## Portfolio Highlights
 
 ### Professional Profile
 
-- Computer Science and Engineering graduate from Galgotias University
-- CGPA: 9.12
+- Computer Science and Engineering 2026 graduate from Galgotias University 
+- CGPA: 9.23 and Among Top 5% University Graduates (Girls)
 - Associate Software Engineer experience at MAQ Software
 - Enterprise-solution experience with Power Apps, Power Automate, Dataverse, Canvas Apps, Azure, Power BI, SharePoint, SQL Server, HTML, CSS, and JavaScript
 - Top 6% contributor in GirlScript Code of Summer Extended 2024
@@ -104,7 +102,7 @@ Then visit <http://localhost:8000>.
 
 - GitHub: [github.com/Zubaida0113](https://github.com/Zubaida0113)
 - LinkedIn: [linkedin.com/in/zubaida-sehnaz-a5415b260](https://www.linkedin.com/in/zubaida-sehnaz-a5415b260/)
-- Email: [zubaida.sehnaz.cse@gmail.com](mailto:zubaida.sehnaz.cse@gmail.com)
+- Email: [zubaidasehnaz@gmail.com](mailto:zubaidasehnaz@gmail.com)
 - LeetCode: `YOUR_LEETCODE_PROFILE_URL`
 - Live demo: `YOUR_LIVE_DEMO_URL`
 
@@ -134,7 +132,7 @@ I am open to software-engineering opportunities, collaborations, and conversatio
 
 - LinkedIn: [linkedin.com/in/zubaida-sehnaz-a5415b260](https://www.linkedin.com/in/zubaida-sehnaz-a5415b260/)
 - GitHub: [github.com/Zubaida0113](https://github.com/Zubaida0113)
-- Email: [zubaida.sehnaz.cse@gmail.com](mailto:zubaida.sehnaz.cse@gmail.com)
+- Email: [zubaidasehnaz@gmail.com](mailto:zubaidasehnaz@gmail.com)
 - Location: Noida, Uttar Pradesh, India
 
 ## License
