@@ -47,6 +47,11 @@ body.motion-ready .reveal {
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
+body.motion-ready .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 body.motion-ready .hero-text,
 body.motion-ready .code-card {
   animation: hero-enter 0.75s ease both;
@@ -834,6 +839,10 @@ footer p {
 .toast.show {
   transform: translateY(0);
   opacity: 1;
+}
+
+.toast.error {
+  background: #b4233b;
 }
 
 /* ================= RESPONSIVE ================= */

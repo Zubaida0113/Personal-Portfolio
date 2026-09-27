@@ -101,19 +101,46 @@ filterBtns.forEach(btn => {
   });
 });
 
-// 5. Contact Form Simulation & Toast
+// 5. Contact Form Submission & Toast
 const contactForm = document.getElementById("contactForm");
 const toast = document.getElementById("toast");
+const toastMessage = toast.querySelector("span");
+const toastIcon = toast.querySelector("i");
+let toastTimeout;
 
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  // Show toast
-  toast.classList.add("show");
-  contactForm.reset();
+contactForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const submitButton = contactForm.querySelector("button[type='submit']");
+  submitButton.disabled = true;
 
-  setTimeout(() => {
-    toast.classList.remove("show");
-  }, 4000);
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: { Accept: "application/json" }
+    });
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error("Contact form submission failed");
+    }
+
+    toast.classList.remove("error");
+    toastIcon.className = "fa-solid fa-circle-check";
+    toastMessage.textContent = "Your message has been sent. Thank you!";
+    contactForm.reset();
+  } catch {
+    toast.classList.add("error");
+    toastIcon.className = "fa-solid fa-circle-exclamation";
+    toastMessage.textContent = "Message could not be sent. Please email zubaidasehnaz@gmail.com.";
+  } finally {
+    submitButton.disabled = false;
+    toast.classList.add("show");
+    window.clearTimeout(toastTimeout);
+    toastTimeout = window.setTimeout(() => {
+      toast.classList.remove("show");
+    }, 5000);
+  }
 });
 
 // 6. Reveal content as it enters the viewport
@@ -122,21 +149,23 @@ const revealElements = document.querySelectorAll(
 );
 const staggeredGroups = document.querySelectorAll(".highlight-box, .skill-card, .project-card, .timeline-item");
 
-document.body.classList.add("motion-ready");
-revealElements.forEach((element) => element.classList.add("reveal"));
-staggeredGroups.forEach((element, index) => {
-  element.style.transitionDelay = `${(index % 4) * 70}ms`;
-});
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0 });
 
-const revealObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add("is-visible");
-    observer.unobserve(entry.target);
+  document.body.classList.add("motion-ready");
+  revealElements.forEach((element) => element.classList.add("reveal"));
+  staggeredGroups.forEach((element, index) => {
+    element.style.transitionDelay = `${(index % 4) * 70}ms`;
   });
-}, { threshold: 0.12 });
 
-revealElements.forEach((element) => revealObserver.observe(element));
+  revealElements.forEach((element) => revealObserver.observe(element));
+}
 
 // 7. Set Current Year in Footer
 document.getElementById("currentYear").textContent = new Date().getFullYear();

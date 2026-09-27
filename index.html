@@ -267,7 +267,31 @@
               <span class="tech-pill">RapidFuzz</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Zubaida0113" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Repo Link</a>
+              <a href="https://github.com/Zubaida0113/Major-Project-2026" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Repo Link</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="ai">
+          <div class="project-header-bar"></div>
+          <div class="project-body">
+            <span class="project-category">AI-Powered Voice Task Manager</span>
+            <h3>Talkify</h3>
+            <p>
+              A full-stack task manager with CRUD operations, due dates, priorities, filtering, and completion tracking. Its voice pipeline uses local Whisper transcription, rule-based extraction, and Pydantic validation to turn natural-language commands into structured tasks. Gemini supports task creation, updates, completion, deletion, and retrieval with human confirmation.
+            </p>
+            <div class="project-tech">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">FastAPI</span>
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">SQLite</span>
+              <span class="tech-pill">SQLAlchemy</span>
+              <span class="tech-pill">Whisper</span>
+              <span class="tech-pill">Gemini</span>
+              <span class="tech-pill">Pydantic</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Zubaida0113/Talkify" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Repo Link</a>
             </div>
           </div>
         </div>
@@ -289,7 +313,7 @@
               <span class="tech-pill">Matplotlib</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Zubaida0113" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Repo Link</a>
+              <a href="https://github.com/Zubaida0113/Music-Recommendation-System" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Repo Link</a>
             </div>
           </div>
         </div>
@@ -407,25 +431,27 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/zubaidasehnaz@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New portfolio contact message" />
+          <input type="hidden" name="_template" value="table" />
           <div class="form-group">
             <label for="name">Your Name</label>
-            <input type="text" id="name" class="form-control" placeholder="e.g. Sarah Connor" required />
+            <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Sarah Connor" required />
           </div>
 
           <div class="form-group">
             <label for="email">Your Email</label>
-            <input type="email" id="email" class="form-control" placeholder="e.g. sarah@company.com" required />
+            <input type="email" id="email" name="_replyto" class="form-control" placeholder="e.g. sarah@company.com" required />
           </div>
 
           <div class="form-group">
             <label for="subject">Subject</label>
-            <input type="text" id="subject" class="form-control" placeholder="Role Opportunity / Collaboration" required />
+            <input type="text" id="subject" name="subject" class="form-control" placeholder="Role Opportunity / Collaboration" required />
           </div>
 
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" class="form-control" placeholder="Hi Zubaida, I saw your portfolio and would like to discuss..." required></textarea>
+            <textarea id="message" name="message" class="form-control" placeholder="Hi Zubaida, I saw your portfolio and would like to discuss..." required></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
@@ -443,7 +469,7 @@
     </div>
   </footer>
 
-  <div class="toast" id="toast">
+  <div class="toast" id="toast" role="status" aria-live="polite">
     <i class="fa-solid fa-circle-check"></i>
     <span>Thank you! Your message has been sent.</span>
   </div>

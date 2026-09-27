@@ -24,10 +24,10 @@ It is designed to help recruiters, collaborators, and developers quickly underst
 - About, Skills, Projects, Education, Experience, and Contact content
 - Project filters for AI/Data and Web/Backend categories
 - Social links for GitHub, LinkedIn, email, and LeetCode
-- Contact form interface with toast feedback
+- Contact form submissions forwarded by FormSubmit after email confirmation
 - Reduced-motion support and accessible navigation label
 
-> The contact form currently displays a confirmation toast; it does not send or store messages. Connect it to a form service or backend to receive submissions.
+> The contact form uses FormSubmit to forward messages to `zubaidasehnaz@gmail.com`. Confirm the activation email from FormSubmit before expecting submissions. Form data is processed by this third-party service.
 
 ## Tech Stack
 
@@ -122,7 +122,7 @@ Replace the LeetCode and live-demo placeholders with the correct profile and dep
 
 - Add a real homepage screenshot and project screenshots.
 - Link project cards to their individual repositories and live demos.
-- Connect the contact form to Formspree, EmailJS, Netlify Forms, or a backend service.
+- Consider moving contact form handling to a service or backend with spam protection and privacy controls appropriate for your needs.
 - Add Open Graph metadata, a favicon, and a social-sharing preview image.
 - Consider a custom domain when available.
 
